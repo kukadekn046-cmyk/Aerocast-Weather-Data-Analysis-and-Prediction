@@ -39,9 +39,11 @@ export default function ModelComparison({ historicalTemps }) {
           </div>
           <div>
             <h4 style={{ fontSize: '1.1rem', fontWeight: '700' }}>Recommended Model: {bestModel.name}</h4>
-            <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem' }}>
-              Highest Coefficient of Determination ($R^2 = {bestModel.metrics.r2}$) with Lowest Root Mean Square Error ($RMSE = {bestModel.metrics.rmse} ^\circ\text{{C}}$).
-            </p>
+            
+              <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem' }}>
+                Highest Coefficient of Determination (R² = {bestModel.metrics.r2}) with Lowest Root Mean Square Error (RMSE = {bestModel.metrics.rmse} °C).
+              </p>
+
           </div>
         </div>
         <div className="tag tag-emerald" style={{ padding: '0.4rem 0.8rem', fontSize: '0.85rem' }}>

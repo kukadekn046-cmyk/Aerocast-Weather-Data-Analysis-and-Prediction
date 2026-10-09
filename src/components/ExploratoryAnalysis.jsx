@@ -1,6 +1,23 @@
 import React from 'react';
 import { Bar } from 'react-chartjs-2';
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend
+} from 'chart.js';
 import { Thermometer, Droplets, Wind, Gauge, BarChart2 } from 'lucide-react';
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend
+);
 
 export default function ExploratoryAnalysis({ historicalData }) {
   if (!historicalData || historicalData.length === 0) return null;
